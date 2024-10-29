@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "kittymod",
+	"version": "${version}",
+	"name": "Kitty Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Lilia"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/kittymod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"lsd.kittymod.KittyMod"
+		],
+		"client": [
+			"lsd.kittymod.KittyModClient"
+		],
+		"fabric-datagen": [
+			"lsd.kittymod.KittyModDataGenerator"
+		]
+	},
+	"mixins": [
+		"kittymod.mixins.json",
+		{
+			"config": "kittymod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
